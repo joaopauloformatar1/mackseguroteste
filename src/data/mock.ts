@@ -86,8 +86,8 @@ export interface ConteudoModulo {
 /* ===== Dados mockados ===== */
 
 export const estatisticas: Estatistica[] = [
-  { label: "Módulos disponíveis", valor: "9", icone: "BookOpen", cor: "blue" },
-  { label: "Minutos de conteúdo", valor: "155", icone: "Clock", cor: "green" },
+  { label: "Módulos disponíveis", valor: "15", icone: "BookOpen", cor: "blue" },
+  { label: "Minutos de conteúdo", valor: "245", icone: "Clock", cor: "green" },
   { label: "Materiais gratuitos", valor: "4", icone: "Download", cor: "orange" },
   { label: "Eventos agendados", valor: "3", icone: "Calendar", cor: "purple" },
 ];
@@ -188,6 +188,69 @@ export const trilhas: Trilha[] = [
         titulo: "Equilíbrio Digital",
         descricao:
           "Estratégias práticas para reduzir o uso excessivo de redes sociais e aplicativos.",
+        duracao: "15 min",
+        xp: 100,
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    slug: "lgpd-protecao-de-dados",
+    titulo: "LGPD e Proteção de Dados Pessoais",
+    descricaoCurta:
+      "Entenda seus direitos e boas práticas de proteção de dados pessoais.",
+    descricaoLonga:
+      "Nesta trilha você vai aprender os conceitos principais da LGPD, a diferença entre dados pessoais e dados sensíveis, os princípios da lei, os direitos do titular, consentimento, compartilhamento, vazamentos e boas práticas de privacidade para o dia a dia e pequenos projetos.",
+    icone: "ShieldCheck",
+    cor: "purple",
+    totalXp: 600,
+    modulos: [
+      {
+        id: 1,
+        titulo: "O que são dados pessoais e dados sensíveis",
+        descricao:
+          "Entenda a diferença entre dados pessoais, dados sensíveis, dados anonimizados e pseudonimizados.",
+        duracao: "15 min",
+        xp: 100,
+      },
+      {
+        id: 2,
+        titulo: "Princípios básicos da LGPD",
+        descricao:
+          "Conheça os princípios que orientam o tratamento correto de dados pessoais.",
+        duracao: "15 min",
+        xp: 100,
+      },
+      {
+        id: 3,
+        titulo: "Direitos do titular de dados",
+        descricao:
+          "Aprenda quais direitos a LGPD garante às pessoas sobre seus próprios dados.",
+        duracao: "15 min",
+        xp: 100,
+      },
+      {
+        id: 4,
+        titulo: "Consentimento, finalidade e compartilhamento de dados",
+        descricao:
+          "Veja quando o consentimento é necessário e como os dados podem ser compartilhados.",
+        duracao: "15 min",
+        xp: 100,
+      },
+      {
+        id: 5,
+        titulo: "Vazamentos de dados: como prevenir e o que fazer",
+        descricao:
+          "Entenda como prevenir incidentes de segurança e o que fazer em caso de vazamento.",
+        duracao: "15 min",
+        xp: 100,
+      },
+      {
+        id: 6,
+        titulo: "Boas práticas de privacidade para pessoas e pequenos projetos",
+        descricao:
+          "Veja práticas simples para proteger dados no dia a dia e em pequenos projetos.",
         duracao: "15 min",
         xp: 100,
       },
@@ -978,6 +1041,441 @@ export const conteudosModulos: ConteudoModulo[] = [
       },
     ],
   },
+
+// ===== TRILHA: LGPD e Proteção de Dados Pessoais =====
+ {
+   trilhaSlug: "lgpd-protecao-de-dados",
+   moduloId: 1,
+   videoTitulo: "O que são dados pessoais e dados sensíveis",
+   videoDuracao: "15:00",
+   conteudo: [
+     "Quase tudo o que você faz hoje deixa um rastro de informação: o nome que você digita num cadastro, a foto que você publica, o lugar de onde acessa um aplicativo. Boa parte desse rastro é formada por dados pessoais — e é exatamente isso que a Lei Geral de Proteção de Dados (LGPD) protege.",
+     "Para a LGPD, dado pessoal é qualquer informação relacionada a uma pessoa que esteja identificada ou que possa ser identificada. Não é só o nome: é o conjunto de informações que, sozinhas ou combinadas, permitem chegar até você. Exemplos comuns: nome completo, CPF, RG, e-mail, telefone, endereço, foto, voz, localização, endereço de IP, cookies e hábitos de consumo.",
+     "Mesmo informações que parecem soltas podem virar um dado pessoal quando combinadas. Saber apenas uma pessoa de 17 anos não identifica ninguém; mas uma estudante de 17 anos, do bairro X, que joga vôlei na escola Y pode apontar para uma única pessoa.",
+     "Existe um grupo de dados que merece cuidado redobrado, porque seu uso indevido pode levar a discriminação ou a danos sérios. A LGPD chama esses dados de sensíveis: informações sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, saúde ou vida sexual, e dado genético ou biométrico, quando vinculado a uma pessoa.",
+     "Quando uma informação é tratada de modo que não seja mais possível identificar a pessoa — e essa identificação não possa ser desfeita com meios razoáveis — ela é considerada um dado anonimizado e, em regra, sai da proteção da LGPD. O cuidado é que muitas bases apenas mascaram os dados (pseudonimização), e aí ainda é possível reidentificar a pessoa: nesse caso, continua sendo dado pessoal.",
+   ],
+   questoes: [
+     {
+       id: 1,
+       pergunta: "Qual das alternativas apresenta apenas exemplos de dados pessoais?",
+       opcoes: [
+         "Temperatura média da cidade e cotação do dólar",
+         "Nome completo, CPF e endereço de e-mail",
+         "Número de habitantes de um país",
+         "Preço de um produto numa loja",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 2,
+       pergunta: "Segundo a LGPD, qual destes é um dado pessoal sensível?",
+       opcoes: [
+         "A marca do celular da pessoa",
+         "A cor preferida da pessoa",
+         "A convicção religiosa da pessoa",
+         "O nome da rua onde a pessoa mora",
+       ],
+       respostaCorreta: 2,
+     },
+     {
+       id: 3,
+       pergunta: "Um dado anonimizado, em regra:",
+       opcoes: [
+         "Continua sendo protegido como dado sensível para sempre",
+         "Deixa de identificar a pessoa e, em regra, sai da proteção da LGPD",
+         "Pode ser revendido livremente sem qualquer cuidado",
+         "É o mesmo que apenas esconder o nome num arquivo",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 4,
+       pergunta:
+         "Por que a combinação de informações sobre uma pessoa pode ser um dado pessoal mesmo sem o nome?",
+       opcoes: [
+         "Porque idade nunca é considerada dado pessoal",
+         "Porque, mesmo sem o nome, o conjunto pode apontar para uma única pessoa",
+         "Porque só vira dado pessoal se incluir o CPF",
+         "Porque informações sobre esporte são sempre sensíveis",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 5,
+       pergunta:
+         "Qual destes é um exemplo de dado pessoal mesmo sem conter o nome da pessoa?",
+       opcoes: [
+         "A cotação do dólar do dia",
+         "O endereço de IP e os cookies do aparelho usado por alguém",
+         "A população total de uma cidade",
+         "A temperatura média mensal",
+       ],
+       respostaCorreta: 1,
+     },
+   ],
+   forum: [],
+ },
+ {
+   trilhaSlug: "lgpd-protecao-de-dados",
+   moduloId: 2,
+   videoTitulo: "Princípios básicos da LGPD",
+   videoDuracao: "15:00",
+   conteudo: [
+     "A LGPD não é só uma lista de proibições. Ela parte de uma ideia central: quem coleta e usa dados de outras pessoas (a lei chama esse uso de tratamento) deve agir com boa-fé e seguir um conjunto de princípios. Esses princípios funcionam como uma bússola — quando bater a dúvida se algo é certo, é a eles que recorremos.",
+     "Finalidade: os dados só podem ser usados para um propósito claro, legítimo e informado à pessoa. Adequação: o uso dos dados precisa combinar com a finalidade informada. Necessidade: colete o mínimo necessário. Livre acesso: a pessoa pode consultar de forma fácil e gratuita quais dados existem sobre ela.",
+     "Qualidade dos dados: os dados devem ser exatos, claros e atualizados. Transparência: a pessoa tem direito a informações claras sobre quem trata seus dados. Segurança: é preciso adotar medidas técnicas e organizacionais para proteger os dados. Prevenção: melhor evitar o problema do que remediar.",
+     "Não discriminação: os dados não podem ser usados para fins discriminatórios ilícitos ou abusivos. Responsabilização e prestação de contas: quem trata os dados precisa conseguir demonstrar que adotou boas práticas — não basta dizer que protege, é preciso comprovar.",
+     "Na prática, antes de pedir qualquer dado, faça três perguntas: para que eu preciso disso? Estou pedindo só o necessário? A pessoa sabe e concordou com esse uso? Se a resposta a alguma delas for não, é hora de repensar.",
+   ],
+   questoes: [
+     {
+       id: 1,
+       pergunta:
+         "Uma loja pede o CPF do cliente apenas para emitir um cupom de desconto que não exige identificação fiscal. Qual princípio está sendo desrespeitado?",
+       opcoes: [
+         "Necessidade, pois coleta mais dados do que precisa",
+         "Segurança, pois não criptografou o dado",
+         "Não discriminação, pois recusou atendimento",
+         "Livre acesso, pois escondeu a política de privacidade",
+       ],
+       respostaCorreta: 0,
+     },
+     {
+       id: 2,
+       pergunta: "O princípio da transparência garante que a pessoa:",
+       opcoes: [
+         "Nunca poderá ter seus dados compartilhados",
+         "Receba informações claras sobre como e por quem seus dados são tratados",
+         "Tenha que pagar para acessar seus próprios dados",
+         "Seja obrigada a aceitar todos os usos propostos",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 3,
+       pergunta:
+         "Não basta proteger os dados; é preciso demonstrar que se adotou boas práticas. Essa ideia corresponde ao princípio de:",
+       opcoes: [
+         "Finalidade",
+         "Qualidade dos dados",
+         "Responsabilização e prestação de contas",
+         "Adequação",
+       ],
+       respostaCorreta: 2,
+     },
+     {
+       id: 4,
+       pergunta:
+         "Um cadastro mantém o telefone antigo de um cliente, já desativado, e por isso ele deixa de receber avisos importantes. Qual princípio foi falho?",
+       opcoes: [
+         "Qualidade dos dados, pois a informação está desatualizada",
+         "Não discriminação",
+         "Portabilidade",
+         "Livre acesso",
+       ],
+       respostaCorreta: 0,
+     },
+     {
+       id: 5,
+       pergunta: "O princípio da finalidade determina que os dados sejam usados:",
+       opcoes: [
+         "Para qualquer propósito que surgir no futuro",
+         "Apenas para propósitos legítimos, específicos e informados ao titular",
+         "Somente por empresas de grande porte",
+         "Sem necessidade de avisar a pessoa",
+       ],
+       respostaCorreta: 1,
+     },
+   ],
+   forum: [],
+ },
+ {
+   trilhaSlug: "lgpd-protecao-de-dados",
+   moduloId: 3,
+   videoTitulo: "Direitos do titular de dados",
+   videoDuracao: "15:00",
+   conteudo: [
+     "Na linguagem da LGPD, a pessoa a quem os dados se referem é chamada de titular. Quem decide como os dados serão usados é o controlador, e quem trata os dados em nome do controlador é o operador. O ponto central é: ao permitir que usem seus dados, você nunca deixa de ser o dono deles.",
+     "A qualquer momento, e mediante pedido, o titular pode solicitar: confirmação de que seus dados são tratados; acesso aos dados; correção de dados incompletos, inexatos ou desatualizados; anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos; e portabilidade dos dados a outro fornecedor de serviço.",
+     "O titular também pode pedir a eliminação dos dados tratados com base no consentimento, informação sobre com quem seus dados foram compartilhados, informação sobre o consentimento e suas consequências, a revogação do consentimento e a revisão de decisões tomadas apenas por sistemas automatizados.",
+     "O pedido costuma ser feito diretamente ao serviço ou empresa, normalmente pelo canal de atendimento ou pelo encarregado de proteção de dados (também chamado de DPO). O atendimento ao titular deve ser gratuito. Se o pedido não for respeitado, é possível registrar reclamação junto a órgãos de defesa do consumidor e à Autoridade Nacional de Proteção de Dados (ANPD).",
+     "Dica de cidadania digital: procure a Política de Privacidade do serviço. É lá que costuma estar o e-mail ou formulário do encarregado de dados, o caminho mais rápido para exercer seus direitos.",
+   ],
+   questoes: [
+     {
+       id: 1,
+       pergunta:
+         "Maria descobriu que seu endereço cadastrado num site está errado. Qual direito ela exerce ao pedir a atualização?",
+       opcoes: ["Portabilidade", "Correção", "Revisão de decisão automatizada", "Eliminação"],
+       respostaCorreta: 1,
+     },
+     {
+       id: 2,
+       pergunta: "O direito de portabilidade permite ao titular:",
+       opcoes: [
+         "Apagar todos os seus dados de uma vez",
+         "Levar seus dados para outro fornecedor de serviço",
+         "Impedir qualquer coleta de dados no futuro",
+         "Receber dinheiro pelos seus dados",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 3,
+       pergunta: "Se um serviço se recusa a atender um pedido legítimo do titular, ele pode:",
+       opcoes: [
+         "Nada pode ser feito, a decisão é final",
+         "Apenas processar a empresa, sem outra alternativa",
+         "Registrar reclamação em órgãos de defesa do consumidor e na ANPD",
+         "Exigir o fechamento imediato da empresa",
+       ],
+       respostaCorreta: 2,
+     },
+     {
+       id: 4,
+       pergunta: "Na linguagem da LGPD, quem é o titular dos dados?",
+       opcoes: [
+         "A empresa que decide como os dados serão usados",
+         "A pessoa a quem os dados se referem",
+         "O órgão que fiscaliza o cumprimento da lei",
+         "Quem trata os dados em nome de outra empresa",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 5,
+       pergunta:
+         "Um banco recusa automaticamente um pedido de crédito apenas por um sistema, sem análise humana. Que direito o titular pode exercer?",
+       opcoes: [
+         "Portabilidade",
+         "Revisão de decisões automatizadas",
+         "Anonimização",
+         "Informação sobre compartilhamento",
+       ],
+       respostaCorreta: 1,
+     },
+   ],
+   forum: [],
+ },
+ {
+   trilhaSlug: "lgpd-protecao-de-dados",
+   moduloId: 4,
+   videoTitulo: "Consentimento, finalidade e compartilhamento de dados",
+   videoDuracao: "15:00",
+   conteudo: [
+     "Muita gente pensa que toda coleta de dados depende de um sim explícito. Na verdade, a LGPD prevê várias situações (chamadas de bases legais) em que o uso de dados é permitido. O consentimento é uma delas — importante, mas não a única. Cumprir contrato, obrigação legal, proteção da vida e legítimo interesse são outros exemplos.",
+     "Quando o uso dos dados se apoia no consentimento, ele precisa ser livre (sem pressão), informado (a pessoa entende para que concorda), inequívoco (uma manifestação clara, não uma caixinha já marcada) e específico (vale para a finalidade indicada, não para qualquer uso futuro). E o consentimento pode ser retirado a qualquer momento, de forma simples e gratuita.",
+     "Toda coleta deve ter uma finalidade definida e informada. Isso evita o uso guarda-tudo, em que a empresa acumula dados sem saber exatamente para quê. Se a finalidade muda de forma incompatível com a original, é preciso informar a pessoa e, em muitos casos, pedir novo consentimento.",
+     "Compartilhar dados com outras empresas ou parceiros é possível, mas não pode ser feito às escondidas. O titular tem o direito de saber com quem seus dados são compartilhados, e o compartilhamento precisa respeitar a finalidade informada e as bases legais. Desconfie de serviços gratuitos cujo modelo de negócio depende de repassar seus dados sem deixar isso claro.",
+     "Antes de clicar em Aceitar, verifique para que os dados serão usados, se há compartilhamento com terceiros e como revogar a autorização depois. Termos longos não significam que você abriu mão dos seus direitos. Para dados sensíveis, a lei exige um consentimento ainda mais destacado e específico.",
+   ],
+   questoes: [
+     {
+       id: 1,
+       pergunta: "Sobre o consentimento na LGPD, é correto afirmar que ele:",
+       opcoes: [
+         "É a única forma de usar dados pessoais legalmente",
+         "Uma vez dado, nunca mais pode ser retirado",
+         "Pode ser revogado a qualquer momento, de forma simples e gratuita",
+         "Pode ser presumido por uma caixinha já marcada",
+       ],
+       respostaCorreta: 2,
+     },
+     {
+       id: 2,
+       pergunta:
+         "Um aplicativo coletou dados para melhorar o serviço e depois passou a vendê-los para anunciantes sem avisar. Qual ideia foi violada?",
+       opcoes: [
+         "A finalidade informada ao titular",
+         "O direito de portabilidade",
+         "A regra de idade mínima",
+         "O princípio da não discriminação apenas",
+       ],
+       respostaCorreta: 0,
+     },
+     {
+       id: 3,
+       pergunta: "Para o tratamento de dados sensíveis, a LGPD exige:",
+       opcoes: [
+         "Nenhum cuidado adicional",
+         "Apenas um aviso no rodapé do site",
+         "Consentimento destacado e específico, ou outra hipótese legal própria",
+         "Pagamento de uma taxa à ANPD",
+       ],
+       respostaCorreta: 2,
+     },
+     {
+       id: 4,
+       pergunta: "Qual destas situações torna o consentimento inválido?",
+       opcoes: [
+         "A pessoa marca uma caixa por vontade própria após ler a finalidade",
+         "Uma caixinha de aceite já vem marcada por padrão",
+         "A pessoa pode revogar o consentimento depois",
+         "A finalidade está descrita de forma clara",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 5,
+       pergunta: "É correto afirmar que o consentimento:",
+       opcoes: [
+         "É a única base legal que permite usar dados pessoais",
+         "É uma entre várias bases legais previstas na LGPD",
+         "Dispensa qualquer informação ao titular",
+         "Vale para qualquer uso futuro, sem limites",
+       ],
+       respostaCorreta: 1,
+     },
+   ],
+   forum: [],
+ },
+ {
+   trilhaSlug: "lgpd-protecao-de-dados",
+   moduloId: 5,
+   videoTitulo: "Vazamentos de dados: como prevenir e o que fazer",
+   videoDuracao: "15:00",
+   conteudo: [
+     "Um vazamento de dados é um tipo de incidente de segurança: um evento em que dados pessoais são acessados, perdidos, alterados ou expostos sem autorização. Pode acontecer por ataque de criminosos, por erro humano (um e-mail enviado para a pessoa errada) ou por falha técnica. As consequências vão de golpes e fraudes a constrangimento e discriminação.",
+     "Para reduzir o risco do lado de quem usa serviços: use senhas fortes e diferentes para cada serviço, de preferência com um gerenciador de senhas; ative a verificação em duas etapas sempre que disponível; desconfie de mensagens com links e pedidos urgentes (phishing); compartilhe o mínimo de dados possível; e mantenha aparelhos e aplicativos atualizados.",
+     "Se seus dados vazarem: troque imediatamente as senhas afetadas e ative a verificação em duas etapas; fique atento a cobranças e tentativas de golpe; avise seu banco se dados financeiros estiverem envolvidos; guarde provas (prints, e-mails); e procure o serviço responsável, registrando reclamação na ANPD e em órgãos de defesa do consumidor se necessário.",
+     "A LGPD obriga quem trata dados a adotar medidas de segurança e a comunicar os incidentes que possam gerar risco ou dano relevante. Pela regulamentação da ANPD, essa comunicação à autoridade e aos titulares afetados deve ser feita pelo responsável em um prazo curto, contado a partir do momento em que se tem ciência de que o incidente atingiu dados pessoais.",
+     "Lembrete importante: nenhuma empresa séria pede sua senha completa, código de verificação ou dados de cartão por telefone, e-mail ou mensagem. Um pedido assim é quase sempre um golpe.",
+   ],
+   questoes: [
+     {
+       id: 1,
+       pergunta: "Qual destas é a melhor prática para reduzir o impacto de um vazamento?",
+       opcoes: [
+         "Usar a mesma senha em todos os serviços para não esquecer",
+         "Usar senhas fortes e diferentes e ativar a verificação em duas etapas",
+         "Anotar as senhas num papel colado no monitor",
+         "Compartilhar a senha com pessoas de confiança",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 2,
+       pergunta:
+         "Você recebeu um e-mail urgente pedindo que clique num link e confirme sua senha do banco. O mais seguro é:",
+       opcoes: [
+         "Clicar rápido para não perder o prazo",
+         "Responder o e-mail com a senha",
+         "Ignorar o link e confirmar pelo canal oficial do banco",
+         "Encaminhar para amigos pedirem orientação",
+       ],
+       respostaCorreta: 2,
+     },
+     {
+       id: 3,
+       pergunta:
+         "Segundo a LGPD, quando um incidente pode causar risco ou dano relevante, o responsável pelos dados deve:",
+       opcoes: [
+         "Esconder o ocorrido para não assustar os clientes",
+         "Comunicar a ANPD e os titulares afetados em prazo curto",
+         "Esperar a ANPD descobrir sozinha",
+         "Cobrar uma taxa dos titulares para informar",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 4,
+       pergunta: "Qual destas situações também é um incidente de segurança com dados pessoais?",
+       opcoes: [
+         "Um e-mail com dados de várias pessoas enviado por engano para o destinatário errado",
+         "Um cliente atualizar o próprio endereço no cadastro",
+         "Uma empresa pedir consentimento antes de coletar dados",
+         "Uma pessoa consultar os próprios dados",
+       ],
+       respostaCorreta: 0,
+     },
+     {
+       id: 5,
+       pergunta:
+         "Você descobre que seus dados de uma loja vazaram. Qual é uma primeira atitude adequada?",
+       opcoes: [
+         "Trocar as senhas afetadas e ativar a verificação em duas etapas",
+         "Apagar todos os seus aplicativos imediatamente",
+         "Ignorar, pois não há nada a fazer",
+         "Repassar seus dados para outras pessoas se protegerem",
+       ],
+       respostaCorreta: 0,
+     },
+   ],
+   forum: [],
+ },
+ {
+   trilhaSlug: "lgpd-protecao-de-dados",
+   moduloId: 6,
+   videoTitulo: "Boas práticas de privacidade para pessoas e pequenos projetos",
+   videoDuracao: "15:00",
+   conteudo: [
+     "Proteção de dados não é assunto só de grandes empresas. Um grupo de voluntários que mantém uma lista de contatos, um projeto de extensão que coleta inscrições ou uma pessoa que administra um perfil também tratam dados pessoais — e podem aplicar boas práticas simples.",
+     "Para a vida pessoal: pense antes de publicar (foto, localização e rotina também são dados); revise periodicamente as permissões e a privacidade das suas contas; evite informar dados sensíveis a serviços que não precisam deles; use senhas fortes e verificação em duas etapas; e tenha cuidado redobrado com dados de crianças e adolescentes.",
+     "Para pequenos projetos e iniciativas: colete só o necessário (cada campo de um formulário deve ter um motivo claro); explique a finalidade e por quanto tempo os dados serão usados; guarde com segurança, limitando quem tem acesso; não compartilhe sem necessidade; descarte quando os dados perderem a finalidade; e ofereça um canal simples para a pessoa pedir acesso, correção ou exclusão.",
+     "Uma ideia poderosa e fácil de adotar é pensar na privacidade desde o início de qualquer projeto, e não como um remendo no final. Ao planejar um cadastro, uma pesquisa ou um evento, pergunte-se: de quais dados eu realmente preciso? Onde vou guardá-los? Quem terá acesso? Como vou apagá-los depois?",
+     "Resumo da trilha em uma frase: trate os dados das outras pessoas com o mesmo cuidado que você gostaria que tratassem os seus. Este conteúdo é educativo e introdutório e não substitui orientação jurídica.",
+   ],
+   questoes: [
+     {
+       id: 1,
+       pergunta: "Ao montar o formulário de inscrição de um projeto comunitário, a melhor atitude é:",
+       opcoes: [
+         "Pedir o máximo de dados possível, por garantia",
+         "Coletar apenas os dados necessários, com finalidade clara",
+         "Não explicar para que servem os dados",
+         "Compartilhar a lista com qualquer parceiro interessado",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 2,
+       pergunta: "Privacidade desde a concepção significa:",
+       opcoes: [
+         "Resolver questões de privacidade só depois de um problema",
+         "Pensar na proteção de dados desde o início do projeto",
+         "Deixar a privacidade por conta dos usuários",
+         "Coletar dados primeiro e decidir o uso depois",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 3,
+       pergunta: "Sobre dados de crianças e adolescentes, o correto é:",
+       opcoes: [
+         "Tratá-los como qualquer outro dado, sem cuidado especial",
+         "Ter cuidado redobrado, pois exigem proteção reforçada",
+         "Publicá-los livremente em redes sociais",
+         "Ignorá-los, pois a LGPD não se aplica a menores",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 4,
+       pergunta:
+         "Um projeto guardou planilhas de inscritos de anos anteriores que não têm mais utilidade. A boa prática é:",
+       opcoes: [
+         "Manter tudo para sempre, por garantia",
+         "Descartar os dados que já cumpriram sua finalidade",
+         "Repassar as planilhas a qualquer parceiro",
+         "Publicar a lista para dar transparência",
+       ],
+       respostaCorreta: 1,
+     },
+     {
+       id: 5,
+       pergunta: "Qual destas é uma boa prática de privacidade na vida pessoal?",
+       opcoes: [
+         "Usar a mesma senha em tudo para não esquecer",
+         "Revisar periodicamente as permissões e a privacidade das contas",
+         "Publicar localização e rotina em tempo real sempre",
+         "Informar dados sensíveis a qualquer serviço que pedir",
+       ],
+       respostaCorreta: 1,
+     },
+   ],
+   forum: [],
+ },
 ];
 
 /* ===== Helpers de cor por tema ===== */
